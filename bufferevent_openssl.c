@@ -592,7 +592,7 @@ do_read(struct bufferevent_openssl *bev_ssl, int n_to_read) {
 	if (n_to_read > atmost)
 		n_to_read = atmost;
 
-	n = evbuffer_reserve_space(input, n_to_read, space, 2);
+	n = evbuffer_reserve_space(input, n_to_read, space, 1);
 	if (n < 0)
 		return OP_ERR;
 
